@@ -1,0 +1,26 @@
+{
+  "name": "node_js_in_action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "1.1": "tsc ./1.1/fs_zlib_gzip.ts && node ./1.1/fs_zlib_gzip.js",
+    "1.2": "concurrently \"tsc -w ./1.2/server-ts.ts\" \"nodemon ./1.2/server-ts.js\"",
+    "2.9": "tsc -w ./2.9/echo_server.ts | nodemon ./2.9/echo_server.js",
+    "2.13": "concurrently \"tsc -w ./2.13/main.ts\" \"tsc -w ./2.13/watcher.ts\" \"nodemon ./2.13/main.js\"",
+    "2.13_": "tsc -w ./2.13/main.ts | tsc -w ./2.13/watcher.ts | nodemon ./2.13/main.js",
+    "2.13_my": "tsc -w ./2.13_my/watcher.ts | nodemon ./2.13_my/watcher.js",
+    "2.13_chokidar": "tsc -w ./2.13_chokidar/watcher.ts | nodemon ./2.13_chokidar/watcher.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.4.10",
+    "chokidar": "^3.5.2",
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  }
+}
